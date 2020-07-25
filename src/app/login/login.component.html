@@ -1,0 +1,9 @@
+<form class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+  <h2 class="form-signin-heading">Iltimos, kiring</h2>
+  <div *ngIf="invalidLogin" class="alert alert-danger">Login yoki parol noto'g'ri.</div>
+  <label for="inputLogin" class="sr-only">Login</label>
+  <input type="input" id="inputLogin" name="login" ngModel class="form-control" placeholder="Login" required autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" name="password" ngModel class="form-control" placeholder="Parol" required>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Kirish</button>
+</form>
